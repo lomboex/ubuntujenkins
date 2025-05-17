@@ -2,13 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Limpiar Workspace') {
-            steps {
-                deleteDir() // Limpia todo antes de empezar
-            }
-        }
-    }
-    stages {
         stage('Iniciar contenedor Ubuntu') {
             steps {
                 script {
@@ -50,4 +43,3 @@ pipeline {
         }
     }
 }
-
